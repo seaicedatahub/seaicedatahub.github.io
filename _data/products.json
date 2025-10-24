@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "OIB",
+    "Instrument": "CReSIS",
+    "Variable": "Total freeboard, snow depth",
+    "Hemisphere": "NH"
+  },
+  {
+    "Name": "BGEP",
+    "Instrument": "ULS",
+    "Variable": "sea ice draft",
+    "Hemisphere": "NH"
+  },
+  {
+    "Name": "IMB",
+    "Instrument": "Buoy",
+    "Variable": "sea ice thickness",
+    "Hemisphere": "SH"
+  },
+  {
+    "Name": "SCICEX",
+    "Instrument": "ULS",
+    "Variable": "sea ice draft",
+    "Hemisphere": "NH"
+  }
+]
