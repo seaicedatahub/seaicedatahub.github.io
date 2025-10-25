@@ -1,79 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
-  <header class="site-header">
-    <div class="wrapper header-wrapper">
-      <h1 class="site-title">
-        <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
-      </h1>
-
-      <nav class="site-nav">
-        <ul>
-          <li><a href="{{ "/" | relative_url }}">Home</a></li>
-          <li><a href="{{ "/products/" | relative_url }}">Products</a></li>
-          <li><a href="{{ "/about/" | relative_url }}">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <style>
-  /* Wrapper général */
-  .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  /* Titre du site */
-  .site-title {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  .site-title a {
-    text-decoration: none;
-    color: #0366d6;
-  }
-  .site-title a:hover {
-    text-decoration: underline;
-  }
-
-  /* Menu horizontal */
-  .site-nav ul {
-    list-style: none;
-    display: flex;       /* alignement horizontal */
-    gap: 1.5rem;         /* espace entre les liens */
-    margin: 0;
-    padding: 0;
-  }
-
-  .site-nav a {
-    text-decoration: none;
-    color: #0366d6;
-    font-weight: 500;
-  }
-
-  .site-nav a:hover {
-    text-decoration: underline;
-  }
-
-  /* Responsive : menu un peu plus petit sur mobile */
-  @media (max-width: 600px) {
-    .header-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .site-nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-  }
-  </style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="icon" href="{{ "/favicon.ico" | relative_url }}">
+  {%- feed_meta -%}
   
 </head>
 
