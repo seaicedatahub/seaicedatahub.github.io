@@ -2,7 +2,7 @@
   {
     "Name": "OIB",
     "Instrument": "CReSIS",
-    "Variable": "Total freeboard, snow depth",
+    "Variable": "snow depth",
     "Hemisphere": "NH"
   },
   {

@@ -1,6 +1,6 @@
 ---
 layout: defaults
-title: Sea Ice Data Hub
+title: About
 
 ---
 

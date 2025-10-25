@@ -1,33 +1,127 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <header class="site-header">
+    <div class="wrapper header-wrapper">
+      <h1 class="site-title">
+        <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      </h1>
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+      <nav class="site-nav">
+        <ul>
+          <li><a href="{{ "/" | relative_url }}">Home</a></li>
+          <li><a href="{{ "/products/" | relative_url }}">Products</a></li>
+          <li><a href="{{ "/about/" | relative_url }}">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  {{content}}
-</ul>
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+  <style>
+  /* Wrapper général */
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
 
+  /* Titre du site */
+  .site-title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .site-title a {
+    text-decoration: none;
+    color: #0366d6;
+  }
+  .site-title a:hover {
+    text-decoration: underline;
+  }
 
-</div>
+  /* Menu horizontal */
+  .site-nav ul {
+    list-style: none;
+    display: flex;       /* alignement horizontal */
+    gap: 1.5rem;         /* espace entre les liens */
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: 500;
+  }
+
+  .site-nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive : menu un peu plus petit sur mobile */
+  @media (max-width: 600px) {
+    .header-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .site-nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  </style>
+
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      {%- include header.html -%}
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>
+        © {{ site.title }} {{ site.time | date: "%Y" }}<br>
+        <a href="mailto:mabo@norceresearch.no">mabo@norceresearch.no</a> — 
+        <a href="mailto:torbjoern.kagel@outlook.de">torbjoern.kagel@outlook.de</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style>
+html { overflow-y: scroll; }
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  color: #666;
+  background: #fafafa;
+}
+.site-footer a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+</style>

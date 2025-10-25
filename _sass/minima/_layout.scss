@@ -1,0 +1,32 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff; /* garde le fond blanc */
+  z-index: 1000;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center; /* centre les liens */
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #0077b6;
+}
+
+.wrapper {
+  max-width: 900px; /* fixe la largeur du contenu global */
+  margin: 0 auto;
+  padding: 0 20px;
+}

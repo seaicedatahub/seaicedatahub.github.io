@@ -37,6 +37,12 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 github_username:  jekyll
 
+navigation:
+  - title: Products
+    url: /products/
+  - title: About
+    url: /about/
+
 #remote_theme: chrisrhymes/bulma-clean-theme@v1.3.0
 
 # Exclude from processing.
